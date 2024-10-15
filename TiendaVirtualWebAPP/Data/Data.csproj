@@ -122,6 +122,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryDat.cs" />
+    <Compile Include="OrderDetailDat.cs" />
+    <Compile Include="Persistence.cs" />
+    <Compile Include="ProductsDat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvidersDat.cs" />
     <Compile Include="CommentDat.cs" />
     <Compile Include="OrderDetailDat.cs" />
     <Compile Include="Persistence.cs" />
