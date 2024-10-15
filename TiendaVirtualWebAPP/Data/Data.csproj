@@ -122,8 +122,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryDat.cs" />
+    <Compile Include="CommentDat.cs" />
     <Compile Include="OrderDetailDat.cs" />
-
     <Compile Include="Persistence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
