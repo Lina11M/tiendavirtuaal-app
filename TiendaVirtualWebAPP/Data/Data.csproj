@@ -122,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CartDat.cs" />
+    <Compile Include="ClientDat.cs" />
+    <Compile Include="OrderDat.cs" />
+    <Compile Include="PayDat.cs" />
     <Compile Include="CategoryDat.cs" />
     <Compile Include="ProductsDat.cs" />
     <Compile Include="OrderDetailDat.cs" />
