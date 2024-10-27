@@ -19,22 +19,28 @@ namespace Logic
             return objCategory.showCategories();
         }
 
-      
+
+        public DataSet showCategoriesDDL()
+        {
+            return objCategory.showCategoriesDDL();
+        }
+
+
         public bool saveCategory(string _nombre)
         {
-            return objCategory;
+            return objCategory.saveCategory(_nombre);
         }
 
   
         public bool updateCategory(int _idCategory, string _nombre)
         {
-            return objCategory;
+            return objCategory.updateCategory(_idCategory, _nombre);
         }
 
 
         public bool deleteCategory(int _idCategory)
         {
-            return objCategory;
+            return objCategory.deleteCategory(_idCategory);
         }
     }
 }
