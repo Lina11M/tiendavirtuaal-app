@@ -28,6 +28,23 @@ namespace Data
             return objData;
         }
 
+        //Metodo para mostrar el Id y el nombre de la categoria
+        public DataSet showCategoriesDDL()
+        {
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+            DataSet objData = new DataSet();
+
+            MySqlCommand objSelectCmd = new MySqlCommand();
+            objSelectCmd.Connection = objPer.openConnection();
+            objSelectCmd.CommandText = "spSelectCategoryDDL";
+            objSelectCmd.CommandType = CommandType.StoredProcedure;
+            objAdapter.SelectCommand = objSelectCmd;
+            objAdapter.Fill(objData);
+            objPer.closeConnection();
+            return objData;
+        }
+
+
         //Metodo para insertar una nueva Categoria
         public bool saveCategory(string _nombre)
         {

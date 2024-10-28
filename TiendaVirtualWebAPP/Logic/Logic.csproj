@@ -71,8 +71,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OrderDetailLog.cs" />
+
     <Compile Include="ProductsLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvidersLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

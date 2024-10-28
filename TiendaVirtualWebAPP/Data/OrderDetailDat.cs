@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -18,6 +20,21 @@ namespace Data
             MySqlCommand objSelectCmd = new MySqlCommand();
             objSelectCmd.Connection = objPer.openConnection();
             objSelectCmd.CommandText = "procSelectDetallePedido"; // Nombre del procedimiento almacenado
+            objSelectCmd.CommandType = CommandType.StoredProcedure;
+            objAdapter.SelectCommand = objSelectCmd;
+            objAdapter.Fill(objData);
+            objPer.closeConnection();
+            return objData;
+        }
+
+        public DataSet showOrderDetailDDL()
+        {
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+            DataSet objData = new DataSet();
+
+            MySqlCommand objSelectCmd = new MySqlCommand();
+            objSelectCmd.Connection = objPer.openConnection();
+            objSelectCmd.CommandText = "spSelectDetallePedidoDDL";
             objSelectCmd.CommandType = CommandType.StoredProcedure;
             objAdapter.SelectCommand = objSelectCmd;
             objAdapter.Fill(objData);
@@ -57,7 +74,7 @@ namespace Data
         }
 
         // Método para actualizar un detalle de pedido
-        public bool updateOrderDetail(int _id, int _cantidad, decimal _precio, int _fkproducto, int _fkpedido)
+        public bool updateOrderDetail(int _idOrderDetail, int _cantidad, decimal _precio, int _fkproducto, int _fkpedido)
         {
             bool executed = false;
             int row;
@@ -66,7 +83,7 @@ namespace Data
             objSelectCmd.Connection = objPer.openConnection();
             objSelectCmd.CommandText = "procUpdateDetallePedido"; // Nombre correcto del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("v_det_id", MySqlDbType.Int32).Value = _id;
+            objSelectCmd.Parameters.Add("v_det_id", MySqlDbType.Int32).Value = _idOrderDetail;
             objSelectCmd.Parameters.Add("v_cantidad", MySqlDbType.Int32).Value = _cantidad;
             objSelectCmd.Parameters.Add("v_precio_unitario", MySqlDbType.Decimal).Value = _precio;
             objSelectCmd.Parameters.Add("v_producto_id", MySqlDbType.Int32).Value = _fkproducto;
@@ -89,7 +106,7 @@ namespace Data
         }
 
         // Método para eliminar un detalle de pedido
-        public bool deleteOrderDetail(int _id)
+        public bool deleteOrderDetail(int _idOrderDetail)
         {
             bool executed = false;
             int row;
@@ -98,7 +115,7 @@ namespace Data
             objSelectCmd.Connection = objPer.openConnection();
             objSelectCmd.CommandText = "procSelectDetallePedido"; // Nombre del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("v_det_id", MySqlDbType.Int32).Value = _id;
+            objSelectCmd.Parameters.Add("v_det_id", MySqlDbType.Int32).Value = _idOrderDetail;
 
             try
             {
