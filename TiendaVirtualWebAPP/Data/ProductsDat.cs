@@ -28,6 +28,21 @@ namespace Data
             return objData;
         }
 
+        public DataSet showProductsDDL()
+        {
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+            DataSet objData = new DataSet();
+
+            MySqlCommand objSelectCmd = new MySqlCommand();
+            objSelectCmd.Connection = objPer.openConnection();
+            objSelectCmd.CommandText = "spSelectProductoDDL";
+            objSelectCmd.CommandType = CommandType.StoredProcedure;
+            objAdapter.SelectCommand = objSelectCmd;
+            objAdapter.Fill(objData);
+            objPer.closeConnection();
+            return objData;
+        }
+
         // Método para guardar un nuevo producto
         public bool saveProducts(string _nombre, string _descripcion, double _precio, int _stock, string _imagen, int _fkcategoria, int _fkproveedor)
         {
@@ -63,7 +78,7 @@ namespace Data
         }
 
         // Método para actualizar un producto
-        public bool updateProducts(int _id, string _nombre, string _descripcion, double _precio, int _stock, string _imagen, int _fkcategoria, int _fkproveedor)
+        public bool updateProducts(int _idProducts, string _nombre, string _descripcion, double _precio, int _stock, string _imagen, int _fkcategoria, int _fkproveedor)
         {
             bool executed = false;
             int row;
@@ -72,7 +87,7 @@ namespace Data
             objSelectCmd.Connection = objPer.openConnection();
             objSelectCmd.CommandText = "procUpdateProducto"; // Nombre del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("v_id", MySqlDbType.Int32).Value = _id;
+            objSelectCmd.Parameters.Add("v_id", MySqlDbType.Int32).Value = _idProducts;
             objSelectCmd.Parameters.Add("v_nombre", MySqlDbType.VarString).Value = _nombre;
             objSelectCmd.Parameters.Add("v_descripcion", MySqlDbType.VarString).Value = _descripcion;
             objSelectCmd.Parameters.Add("v_precio", MySqlDbType.Double).Value = _precio;
@@ -98,7 +113,7 @@ namespace Data
         }
 
         // Método para eliminar un producto
-        public bool deleteProducts(int _id)
+        public bool deleteProducts(int _idProducts)
         {
             bool executed = false;
             int row;
@@ -107,7 +122,7 @@ namespace Data
             objSelectCmd.Connection = objPer.openConnection();
             objSelectCmd.CommandText = "procDeleteProducto"; // Nombre del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("v_id", MySqlDbType.Int32).Value = _id;
+            objSelectCmd.Parameters.Add("v_id", MySqlDbType.Int32).Value = _idProducts;
 
             try
             {
