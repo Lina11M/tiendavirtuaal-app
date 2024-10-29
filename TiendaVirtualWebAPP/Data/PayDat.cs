@@ -27,6 +27,22 @@ namespace Data
             return objData;
         }
 
+        // Método DLL
+        public DataSet showPagosDDL()
+        {
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+            DataSet objData = new DataSet();
+
+            MySqlCommand objSelectCmd = new MySqlCommand();
+            objSelectCmd.Connection = objPer.openConnection();
+            objSelectCmd.CommandText = "spSelectPayDDL";
+            objSelectCmd.CommandType = CommandType.StoredProcedure;
+            objAdapter.SelectCommand = objSelectCmd;
+            objAdapter.Fill(objData);
+            objPer.closeConnection();
+            return objData;
+        }
+
         // Método para guardar un nuevo pago
         public bool savePago(double _monto, string _fecha, string _metodoPago, int _fkpedidos)
         {
