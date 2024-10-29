@@ -45,6 +45,7 @@ namespace Logic
         {
             
             return objCat.deletePago(_idPago);
+
         }
     }
 }
