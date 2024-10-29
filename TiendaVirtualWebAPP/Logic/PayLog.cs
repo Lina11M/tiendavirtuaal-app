@@ -38,7 +38,6 @@ namespace Logic
         public bool updatePago(int _idPago, double _monto, string _fecha, string _metodoPago, int _fkpedidos)
         {
             return objCat.updatePago(_idPago,_monto,_fecha,_metodoPago,_fkpedidos);
-
         }
 
         // Método para borrar un pago
