@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Presentation.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+             <%--Aqui va lo que se repite en los demas formularios--%>
+        <a href="inicio.aspx">Inicio</a>
+        <a href="#">Carrito Compras</a>
+        <a href="#">Categoria</a>
+        <a href="#">Clientes</a>
+        <a href="#">Comentarios</a>
+        <a href="#">Detalle Pedido</a>
+        <a href="#">Pagos</a>
+        <a href="#">Pedidos</a>
+        <a href="#">Productos</a>
+        <a href="#">Proveedores</a>
+        <a href="#">Usuarios</a>
+        <a href="#">Cerrar Sesion</a>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+     <%-- pie de pagina--%>
+  <p> modazero@gmail.com</p>
+</body>
+</html>
