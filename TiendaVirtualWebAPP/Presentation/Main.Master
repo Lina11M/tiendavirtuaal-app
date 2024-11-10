@@ -20,7 +20,7 @@
         <a href="#">Detalle Pedido</a>
         <a href="#">Pagos</a>
         <a href="#">Pedidos</a>
-        <a href="#">Productos</a>
+        <a href="WFProducts.aspx">Productos</a>
         <a href="#">Proveedores</a>
         <a href="#">Usuarios</a>
         <a href="#">Cerrar Sesion</a>
