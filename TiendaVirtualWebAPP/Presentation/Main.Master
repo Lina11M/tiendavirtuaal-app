@@ -17,9 +17,11 @@
         <a href="#">Categoria</a>
         <a href="#">Clientes</a>
         <a href="#">Comentarios</a>
-        <a href="#">Detalle Pedido</a>
+        <a href="#">Detalle-Pedido</a>
         <a href="#">Pagos</a>
         <a href="#">Pedidos</a>
+        <a href="#">Productos</a>
+        <a href="WFProviders.aspx">Proveedores</a>
         <a href="WFProducts.aspx">Productos</a>
         <a href="#">Proveedores</a>
         <a href="#">Usuarios</a>
