@@ -71,7 +71,7 @@ namespace Data
         }
 
         // Método para actualizar un proveedor
-        public bool updateProveedor(int _idProviders, string _nit, string _nombre, string _contacto)
+        public bool updateProviders(int _idProviders, string _nit, string _nombre, string _contacto)
         {
             bool executed = false;
             int row;
@@ -102,7 +102,7 @@ namespace Data
         }
 
         // Método para eliminar un proveedor
-        public bool deleteProveedor(int _idProviders)
+        public bool deleteProviders(int _idProviders)
         {
             bool executed = false;
             int row;
