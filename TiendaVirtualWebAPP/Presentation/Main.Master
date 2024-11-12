@@ -17,9 +17,15 @@
         <a href="#">Categoria</a>
         <a href="#">Clientes</a>
         <a href="#">Comentarios</a>
+<<<<<<< Updated upstream
         <a href="#">Detalle Pedido</a>
         <a href="#">Pagos</a>
         <a href="#">Pedidos</a>
+=======
+        <a href="WFOrder_datail.aspx">Detalle-Pedido</a>
+        <a href="WFPay.aspx">Pagos</a>
+        <a href="WFOrders.aspx">Pedidos</a>
+>>>>>>> Stashed changes
         <a href="#">Productos</a>
         <a href="#">Proveedores</a>
         <a href="#">Usuarios</a>
