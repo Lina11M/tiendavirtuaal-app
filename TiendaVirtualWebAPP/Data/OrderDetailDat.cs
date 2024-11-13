@@ -19,7 +19,7 @@ namespace Data
 
             MySqlCommand objSelectCmd = new MySqlCommand();
             objSelectCmd.Connection = objPer.openConnection();
-            objSelectCmd.CommandText = "procSelectDetallePedido"; // Nombre del procedimiento almacenado
+            objSelectCmd.CommandText = "proSelectDetallePedido"; // Nombre del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
             objAdapter.SelectCommand = objSelectCmd;
             objAdapter.Fill(objData);
@@ -34,7 +34,7 @@ namespace Data
 
             MySqlCommand objSelectCmd = new MySqlCommand();
             objSelectCmd.Connection = objPer.openConnection();
-            objSelectCmd.CommandText = "spSelectDetallePedidoDDL";
+            objSelectCmd.CommandText = "spSelectProductoDDL";
             objSelectCmd.CommandType = CommandType.StoredProcedure;
             objAdapter.SelectCommand = objSelectCmd;
             objAdapter.Fill(objData);
@@ -50,7 +50,7 @@ namespace Data
 
             MySqlCommand objSelectCmd = new MySqlCommand();
             objSelectCmd.Connection = objPer.openConnection();
-            objSelectCmd.CommandText = "procInsertDetallePedido"; // Nombre del procedimiento almacenado
+            objSelectCmd.CommandText = "proInsertDetallePedido"; // Nombre del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
             objSelectCmd.Parameters.Add("v_cantidad", MySqlDbType.Int32).Value = _cantidad;
             objSelectCmd.Parameters.Add("v_precio_unitario", MySqlDbType.Decimal).Value = _precio;
@@ -81,9 +81,9 @@ namespace Data
 
             MySqlCommand objSelectCmd = new MySqlCommand();
             objSelectCmd.Connection = objPer.openConnection();
-            objSelectCmd.CommandText = "procUpdateDetallePedido"; // Nombre correcto del procedimiento almacenado
+            objSelectCmd.CommandText = "proUpdateDetallePedido"; // Nombre correcto del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("v_det_id", MySqlDbType.Int32).Value = _idOrderDetail;
+            objSelectCmd.Parameters.Add("v_id", MySqlDbType.Int32).Value = _idOrderDetail;
             objSelectCmd.Parameters.Add("v_cantidad", MySqlDbType.Int32).Value = _cantidad;
             objSelectCmd.Parameters.Add("v_precio_unitario", MySqlDbType.Decimal).Value = _precio;
             objSelectCmd.Parameters.Add("v_producto_id", MySqlDbType.Int32).Value = _fkproducto;
