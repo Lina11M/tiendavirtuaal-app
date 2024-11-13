@@ -95,7 +95,7 @@ namespace Presentation
             _estado = TBEstado.Text;
             _rol = TBRol.Text;
 
-            executed = objUser.saveUsers(_correo, _contrasena, _salt, _estado, _rol);
+            executed = objUser.updateUsers(_idUsers, _correo, _contrasena, _salt, _estado, _rol);
 
             if (executed)
             {

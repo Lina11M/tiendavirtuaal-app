@@ -121,7 +121,7 @@ namespace Presentation
             _pro_Id = Convert.ToInt32(DDLProduct.SelectedValue);
             _cli_Id = Convert.ToInt32(DDLClient.SelectedValue);
 
-            executed = objCart.saveCart(_cantidad, _pro_Id, _cli_Id);
+            executed = objCart.updateCart(_idCart, _cantidad, _pro_Id, _cli_Id);
 
             if (executed)
             {
