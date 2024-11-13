@@ -48,7 +48,7 @@ namespace Presentation
             DDLProduct.DataValueField = "pro_id";
 
             // Se especifica el campo que se mostrará como texto para cada elemento del DropDownList.
-            DDLProduct.DataTextField = "pro_nombre";
+            DDLProduct.DataTextField = "producto_info";
 
             // Se enlaza el origen de datos con el DropDownList.
             DDLProduct.DataBind();
