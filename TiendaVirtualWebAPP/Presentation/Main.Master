@@ -13,33 +13,16 @@
     <form id="form1" runat="server">
              <%--Aqui va lo que se repite en los demas formularios--%>
         <a href="inicio.aspx">Inicio</a>
-        <a href="#">Carrito Compras</a>
-
+        <a href="WFCart.aspx">Carrito de Compras</a>
         <a href="WFCategory.aspx">Categoria</a>
-        <a href="#">Clientes</a>
-
-        <a href="#">Categoria</a>
         <a href="WFClients.aspx">Clientes</a>
-
-        <a href="#">Comentarios</a>
-
-        <a href="#">Detalle Pedido</a>
-        <a href="#">Pagos</a>
-        <a href="#">Pedidos</a>
-        
+        <a href="WFComment.aspx">Comentarios</a>
         <a href="WFOrder_datail.aspx">Detalle-Pedido</a>
         <a href="WFPay.aspx">Pagos</a>
         <a href="WFOrders.aspx">Pedidos</a>
-
-        <a href="#">Detalle-Pedido</a>
-        <a href="WFPay.aspx">Pagos</a>
-        <a href="WFOrders.aspx">Pedidos</a>
-
-        <a href="#">Productos</a>
         <a href="WFProviders.aspx">Proveedores</a>
         <a href="WFProducts.aspx">Productos</a>
-        <a href="#">Proveedores</a>
-        <a href="#">Usuarios</a>
+        <a href="WFUsers.aspx">Usuarios</a>
         <a href="#">Cerrar Sesion</a>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
