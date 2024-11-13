@@ -74,7 +74,7 @@ namespace Data
         }
 
         // Método para actualizar un cliente
-        public bool updateClient(int _clien_id, string _nombre, string _telefono, string _direccion)
+        public bool updateClient(int _cli_id, string _nombre, string _telefono, string _direccion)
         {
             bool executed = false;
             int row;
@@ -83,7 +83,7 @@ namespace Data
             objSelectCmd.Connection = objPer.openConnection();
             objSelectCmd.CommandText = "proUpdateClient"; //nombre del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("v_clien_id", MySqlDbType.Int32).Value = _clien_id;
+            objSelectCmd.Parameters.Add("v_id", MySqlDbType.Int32).Value = _cli_id;
             objSelectCmd.Parameters.Add("v_nombre", MySqlDbType.VarString).Value = _nombre;
             objSelectCmd.Parameters.Add("v_telefono", MySqlDbType.VarString).Value = _telefono;
             objSelectCmd.Parameters.Add("v_direccion", MySqlDbType.VarString).Value = _direccion;
@@ -106,7 +106,7 @@ namespace Data
         }
 
         // Método para borrar un cliente
-        public bool deleteClient(int _clien_id)
+        public bool deleteClient(int _cli_id)
         {
             bool executed = false;
             int row;
@@ -115,7 +115,7 @@ namespace Data
             objSelectCmd.Connection = objPer.openConnection();
             objSelectCmd.CommandText = "proDeleteClient"; //nombre del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("v_clien_id", MySqlDbType.Int32).Value = _clien_id;
+            objSelectCmd.Parameters.Add("v_cli_id", MySqlDbType.Int32).Value = _cli_id;
 
             try
             {

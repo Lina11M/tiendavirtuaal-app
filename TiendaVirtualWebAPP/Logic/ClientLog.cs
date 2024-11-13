@@ -35,10 +35,10 @@ namespace Logic
         }
 
         // Método para actualizar un cliente
-        public bool updateClient(int _clien_id, string _nombre, string _telefono, string _direccion)
+        public bool updateClient(int _cli_id, string _nombre, string _telefono, string _direccion)
         {
             
-            return objCat.updateClient(_clien_id,_nombre,_telefono,_direccion);
+            return objCat.updateClient(_cli_id,_nombre,_telefono,_direccion);
 
         }
 
