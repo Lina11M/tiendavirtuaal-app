@@ -15,18 +15,24 @@
         <a href="inicio.aspx">Inicio</a>
         <a href="#">Carrito Compras</a>
         <a href="#">Categoria</a>
-        <a href="#">Clientes</a>
+        <a href="WFClients.aspx">Clientes</a>
         <a href="#">Comentarios</a>
-<<<<<<< Updated upstream
+
         <a href="#">Detalle Pedido</a>
         <a href="#">Pagos</a>
         <a href="#">Pedidos</a>
-=======
+        
         <a href="WFOrder_datail.aspx">Detalle-Pedido</a>
         <a href="WFPay.aspx">Pagos</a>
         <a href="WFOrders.aspx">Pedidos</a>
->>>>>>> Stashed changes
+
+        <a href="#">Detalle-Pedido</a>
+        <a href="WFPay.aspx">Pagos</a>
+        <a href="WFOrders.aspx">Pedidos</a>
+
         <a href="#">Productos</a>
+        <a href="WFProviders.aspx">Proveedores</a>
+        <a href="WFProducts.aspx">Productos</a>
         <a href="#">Proveedores</a>
         <a href="#">Usuarios</a>
         <a href="#">Cerrar Sesion</a>

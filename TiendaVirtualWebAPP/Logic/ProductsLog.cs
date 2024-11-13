@@ -11,7 +11,7 @@ namespace Logic
 {
     public class ProductsLog
     {
-        ProductsDat objProdu = new ProductsDat
+        ProductsDat objProdu = new ProductsDat();
         public DataSet showProducts()
         {
             return objProdu.showProducts();
