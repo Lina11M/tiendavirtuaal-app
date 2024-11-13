@@ -24,7 +24,7 @@ namespace Logic
         public DataSet showClientsDDL()
         {
             
-            return objCat.showClientsDDL();
+            return objCat.showClientsDLL();
         }
 
         // Método para guardar un nuevo cliente

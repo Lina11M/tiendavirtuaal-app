@@ -28,14 +28,14 @@ namespace Logic
             return objProv.saveProviders(_nit, _nombre, _contacto);
         }
 
-        public bool updateProveedor(int _id, string _nit, string _nombre, string _contacto)
+        public bool updateProviders(int _idProviders, string _nit, string _nombre, string _contacto)
         {
-            return objProv.updateProveedor(_id, _nit, _nombre, _contacto);
+            return objProv.updateProviders(_idProviders, _nit, _nombre, _contacto);
         }
 
-        public bool deleteProveedor(int _idProviders)
+        public bool deleteProviders(int _idProviders)
         {
-            return objProv.deleteProveedor(_idProviders);
+            return objProv.deleteProviders(_idProviders);
         }
     }
 }
