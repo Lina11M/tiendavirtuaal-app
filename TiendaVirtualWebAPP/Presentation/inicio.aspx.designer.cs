@@ -11,7 +11,7 @@ namespace Presentation
 {
 
 
-    public partial class inicio
+    public partial class Inicio
     {
     }
 }

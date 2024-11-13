@@ -64,19 +64,100 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+
+
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+
+
+
     <Content Include="inicio.aspx" />
+
+
+
+    <Content Include="bin\BouncyCastle.Cryptography.dll" />
+    <Content Include="bin\BouncyCastle.Cryptography.xml" />
+    <Content Include="bin\Data.dll" />
+    <Content Include="bin\Data.pdb" />
+    <Content Include="bin\Google.Protobuf.dll" />
+    <Content Include="bin\Google.Protobuf.pdb" />
+    <Content Include="bin\Google.Protobuf.xml" />
+    <Content Include="bin\K4os.Compression.LZ4.dll" />
+    <Content Include="bin\K4os.Compression.LZ4.Streams.dll" />
+    <Content Include="bin\K4os.Compression.LZ4.Streams.xml" />
+    <Content Include="bin\K4os.Compression.LZ4.xml" />
+    <Content Include="bin\K4os.Hash.xxHash.dll" />
+    <Content Include="bin\K4os.Hash.xxHash.xml" />
+    <Content Include="bin\Logic.dll" />
+    <Content Include="bin\Logic.pdb" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\MySql.Data.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Presentation.dll" />
+    <Content Include="bin\Presentation.pdb" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.Buffers.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Memory.dll" />
+    <Content Include="bin\roslyn\System.Numerics.Vectors.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Buffers.dll" />
+    <Content Include="bin\System.Buffers.xml" />
+    <Content Include="bin\System.IO.Pipelines.dll" />
+    <Content Include="bin\System.IO.Pipelines.xml" />
+    <Content Include="bin\System.Memory.dll" />
+    <Content Include="bin\System.Memory.xml" />
+    <Content Include="bin\System.Numerics.Vectors.dll" />
+    <Content Include="bin\System.Numerics.Vectors.xml" />
+    <Content Include="bin\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\ZstdSharp.dll" />
+    <Content Include="Inicio.aspx" />
+
+    <Content Include="WFOrder_datail.aspx" />
+
+
+    <Content Include="Web.config" />
+    <Content Include="WFClients.aspx" />
+    <Content Include="WFOrders.aspx" />
+    <Content Include="WFPay.aspx" />
+    <Content Include="WFProviders.aspx" />
     <Content Include="Web.config" />
     <Content Include="WFCart.aspx" />
     <Content Include="WFComment.aspx" />
     <Content Include="WFUsers.aspx" />
+    <Content Include="WFProducts.aspx" />
+
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="inicio.aspx.cs">
-      <DependentUpon>inicio.aspx</DependentUpon>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="inicio.aspx.designer.cs">
-      <DependentUpon>inicio.aspx</DependentUpon>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -85,7 +166,22 @@
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
+
+
+
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="WFOrder_datail.aspx.cs">
+      <DependentUpon>WFOrder_datail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFOrder_datail.aspx.designer.cs">
+      <DependentUpon>WFOrder_datail.aspx</DependentUpon>
+    </Compile>
+
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
+
     <Compile Include="WFCart.aspx.cs">
       <DependentUpon>WFCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,10 +202,60 @@
     </Compile>
     <Compile Include="WFUsers.aspx.designer.cs">
       <DependentUpon>WFUsers.aspx</DependentUpon>
+
+    <Compile Include="WFClients.aspx.cs">
+      <DependentUpon>WFClients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFClients.aspx.designer.cs">
+      <DependentUpon>WFClients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFOrders.aspx.cs">
+      <DependentUpon>WFOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFOrders.aspx.designer.cs">
+      <DependentUpon>WFOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFPay.aspx.cs">
+      <DependentUpon>WFPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFPay.aspx.designer.cs">
+      <DependentUpon>WFPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFProviders.aspx.cs">
+      <DependentUpon>WFProviders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFProviders.aspx.designer.cs">
+      <DependentUpon>WFProviders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFProducts.aspx.cs">
+      <DependentUpon>WFProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFProducts.aspx.designer.cs">
+      <DependentUpon>WFProducts.aspx</DependentUpon>
+
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.Master" />
+    <Content Include="bin\Data.dll.config" />
+    <Content Include="bin\Logic.dll.config" />
+    <Content Include="bin\Presentation.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

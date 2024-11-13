@@ -56,7 +56,7 @@ namespace Data
             objSelectCmd.Parameters.Add("v_pag_monto", MySqlDbType.Double).Value = _monto;
             objSelectCmd.Parameters.Add("v_pag_fecha", MySqlDbType.Text).Value = _fecha;
             objSelectCmd.Parameters.Add("v_pag_metodo_pago", MySqlDbType.VarString).Value = _metodoPago;
-            objSelectCmd.Parameters.Add("v_fkpedidos", MySqlDbType.Int32).Value = _fkpedidos;
+            objSelectCmd.Parameters.Add("v_tbl_pedidos_ped_id", MySqlDbType.Int32).Value = _fkpedidos;
 
             try
             {
@@ -88,7 +88,7 @@ namespace Data
             objSelectCmd.Parameters.Add("v_pag_monto", MySqlDbType.Double).Value = _monto;
             objSelectCmd.Parameters.Add("v_pag_fecha", MySqlDbType.Text).Value = _fecha;
             objSelectCmd.Parameters.Add("v_pag_metodo_pago", MySqlDbType.VarString).Value = _metodoPago;
-            objSelectCmd.Parameters.Add("v_fkpedidos", MySqlDbType.Int32).Value = _fkpedidos;
+            objSelectCmd.Parameters.Add("v_tbl_pedidos_ped_id", MySqlDbType.Int32).Value = _fkpedidos;
 
             try
             {
