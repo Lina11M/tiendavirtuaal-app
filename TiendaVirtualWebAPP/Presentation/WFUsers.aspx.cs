@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace Presentation
         UserLog objUser = new UserLog();
 
         private int _idUsers;
-        private string _correo, _contrasena, _estado, _rol;
+        private string _correo, _contrasena, _salt, _estado, _rol;
         private bool executed = false;
 
 
@@ -53,6 +54,7 @@ namespace Presentation
             HFUserId.Value = "";
             TBCorreo.Text = "";
             TBContrasena.Text = "";
+            TBSalt.Text = "";
             TBEstado.Text = "";
             TBRol.Text = "";
 
@@ -64,10 +66,11 @@ namespace Presentation
         {
             _correo = TBCorreo.Text;
             _contrasena = TBContrasena.Text;
+            _salt = TBSalt.Text;
             _estado = TBEstado.Text;
             _rol = TBRol.Text;
 
-            executed = objUser.saveUsers(_correo, _contrasena, _estado, _rol);
+            executed = objUser.saveUsers(_correo, _contrasena, _salt, _estado, _rol);
 
             if (executed)
             {
@@ -88,10 +91,11 @@ namespace Presentation
             _idUsers = Convert.ToInt32(HFUserId.Value);
             _correo = TBCorreo.Text;  //Captura el valor que se ingrese en el Texbox
             _contrasena = TBContrasena.Text;
+            _salt = TBSalt.Text;
             _estado = TBEstado.Text;
             _rol = TBRol.Text;
 
-            executed = objUser.saveUsers(_correo, _contrasena, _estado, _rol);
+            executed = objUser.saveUsers(_correo, _contrasena, _salt, _estado, _rol);
 
             if (executed)
             {
@@ -113,8 +117,9 @@ namespace Presentation
             HFUserId.Value = GVUsers.SelectedRow.Cells[0].Text;
             TBCorreo.Text = GVUsers.SelectedRow.Cells[1].Text;
             TBContrasena.Text = GVUsers.SelectedRow.Cells[2].Text;
-            TBEstado.Text = GVUsers.SelectedRow.Cells[3].Text;
-            TBRol.Text = GVUsers.SelectedRow.Cells[4].Text;
+            TBSalt.Text = GVUsers.SelectedRow.Cells[3].Text;
+            TBEstado.Text = GVUsers.SelectedRow.Cells[4].Text;
+            TBRol.Text = GVUsers.SelectedRow.Cells[5].Text;
         }
 
 

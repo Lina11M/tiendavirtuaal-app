@@ -175,7 +175,7 @@
     </Compile>
     <Compile Include="WFCategory.aspx.designer.cs">
       <DependentUpon>WFCategory.aspx</DependentUpon>
-
+    </Compile>
     <Compile Include="WFCart.aspx.cs">
       <DependentUpon>WFCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -18,6 +18,10 @@
         <asp:Label ID="Label2" runat="server" Text="Ingrese la contraseña"></asp:Label>
         <asp:TextBox ID="TBContrasena" runat="server"></asp:TextBox>
         <br />
+        <%--Salt--%>
+        <asp:Label ID="Label4" runat="server" Text="Salt"></asp:Label>
+        <asp:TextBox ID="TBSalt" runat="server"></asp:TextBox>
+        <br />
         <%--Estado--%>
         <asp:Label ID="Label5" runat="server" Text="Ingrese el estado"></asp:Label>
         <asp:TextBox ID="TBEstado" runat="server"></asp:TextBox>
@@ -32,13 +36,14 @@
         <asp:Label ID="LblMsj" runat="server" Text=""></asp:Label>
         <br />
 
-        <%--Lista de productos--%>
+        <%--Lista de Usuarios--%>
         <asp:GridView ID="GVUsers" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVUsers_SelectedIndexChanged">
             <%--Se agrega la propiedad "Columns" que permite personalizar los nombres de las columnas--%>
             <Columns>
                 <asp:BoundField DataField="usu_id" HeaderText="Id" />
                 <asp:BoundField DataField="usu_correo" HeaderText="Correo" />
                 <asp:BoundField DataField="usu_contrasena" HeaderText="Contraseña" />
+                <asp:BoundField DataField="usu_salt" HeaderText="Salt" />
                 <asp:BoundField DataField="usu_estado" HeaderText="Estado" />
                 <asp:BoundField DataField="usu_rol" HeaderText="Rol" />
                 <asp:CommandField ShowSelectButton="True"></asp:CommandField>
