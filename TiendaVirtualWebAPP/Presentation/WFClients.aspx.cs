@@ -61,7 +61,7 @@ namespace Presentation
             string telefono = TxtTelefono.Text;
             string direccion = TxtDireccion.Text;
 
-            bool executed = objClientLog.updateClient(clienteId, nombre, telefono, direccion);
+            executed = objClientLog.updateClient(clienteId, nombre, telefono, direccion);
 
             if (executed)
             {
@@ -92,7 +92,6 @@ namespace Presentation
             TxtNombre.Text = GVClients.SelectedRow.Cells[1].Text;
             TxtTelefono.Text = GVClients.SelectedRow.Cells[2].Text;
             TxtDireccion.Text = GVClients.SelectedRow.Cells[3].Text;
-
         }
     }
 }

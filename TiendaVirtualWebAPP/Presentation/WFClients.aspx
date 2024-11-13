@@ -34,12 +34,12 @@
         <%-- Lista de clientes --%>
         <asp:GridView ID="GVClients" runat="server" AutoGenerateColumns="False" 
             OnSelectedIndexChanged="GVClients_SelectedIndexChanged" 
-            DataKeyNames="clien_id" > 
+            DataKeyNames="cli_id" > 
             <Columns>
-                <asp:BoundField DataField="clien_id" HeaderText="ID" /> 
-                <asp:BoundField DataField="clien_nombre" HeaderText="Nombre" />
-                <asp:BoundField DataField="clien_telefono" HeaderText="Teléfono" />
-                <asp:BoundField DataField="clien_direccion" HeaderText="Dirección" />
+                <asp:BoundField DataField="cli_id" HeaderText="ID" /> 
+                <asp:BoundField DataField="cli_nombre" HeaderText="Nombre" />
+                <asp:BoundField DataField="cli_telefono" HeaderText="Teléfono" />
+                <asp:BoundField DataField="cli_direccion" HeaderText="Dirección" />
                 <asp:CommandField ShowSelectButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
             </Columns>
