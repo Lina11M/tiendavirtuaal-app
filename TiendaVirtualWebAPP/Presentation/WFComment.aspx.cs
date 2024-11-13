@@ -128,7 +128,7 @@ namespace Presentation
             _pro_id = Convert.ToInt32(DDLProduct.SelectedValue);
             _cli_id = Convert.ToInt32(DDLClient.SelectedValue);
 
-            executed = objComent.saveComment(_comentario, _fecha, _pro_id, _cli_id);
+            executed = objComent.updateComment(_idComment, _comentario, _fecha, _pro_id, _cli_id);
 
             if (executed)
             {
