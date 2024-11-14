@@ -27,8 +27,8 @@ namespace Presentation
         {
             DataSet ds = objClientLog.showClients();
             DDLCliente.DataSource = ds;
-            DDLCliente.DataValueField = "clien_id";
-            DDLCliente.DataTextField = "clien_nombre";
+            DDLCliente.DataValueField = "cli_id";
+            DDLCliente.DataTextField = "cli_nombre";
             DDLCliente.DataBind();
             DDLCliente.Items.Insert(0, "Seleccione");
         }

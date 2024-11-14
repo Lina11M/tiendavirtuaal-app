@@ -55,7 +55,7 @@ namespace Data
             objSelectCmd.Parameters.Add("v_ped_fecha", MySqlDbType.VarString).Value = _fecha;
             objSelectCmd.Parameters.Add("v_ped_estado", MySqlDbType.VarString).Value = _estado;
             objSelectCmd.Parameters.Add("v_ped_total", MySqlDbType.Int32).Value = _total;
-            objSelectCmd.Parameters.Add("v_tbl_cliente_clien_id", MySqlDbType.Int32).Value = _fkclient;
+            objSelectCmd.Parameters.Add("v_tbl_clientes_cli_id", MySqlDbType.Int32).Value = _fkclient;
 
             try
             {
@@ -87,7 +87,7 @@ namespace Data
             objSelectCmd.Parameters.Add("v_ped_fecha", MySqlDbType.VarString).Value = _fecha;
             objSelectCmd.Parameters.Add("v_ped_estado", MySqlDbType.VarString).Value = _estado;
             objSelectCmd.Parameters.Add("v_ped_total", MySqlDbType.Int32).Value = _total;
-            objSelectCmd.Parameters.Add("v_tbl_cliente_clien_id", MySqlDbType.Int32).Value = _idCliente;
+            objSelectCmd.Parameters.Add("v_tbl_clientes_cli_id", MySqlDbType.Int32).Value = _idCliente;
 
             try
             {
