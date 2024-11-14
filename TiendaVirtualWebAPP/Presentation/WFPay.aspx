@@ -42,7 +42,7 @@
                 <asp:BoundField DataField="pag_id" HeaderText="ID" />
                 <asp:BoundField DataField="pag_monto" HeaderText="Monto" />
                 <asp:BoundField DataField="pag_fecha" HeaderText="Fecha" />
-                <asp:BoundField DataField="pag_metodo_pago" HeaderText="Método de Pago" />
+                <asp:BoundField DataField="pag_met_pago" HeaderText="Método de Pago" />
                 <asp:BoundField DataField="tbl_pedidos_ped_id" HeaderText="Pedido" /> 
                 <asp:CommandField ShowSelectButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
