@@ -4,6 +4,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -150,5 +151,33 @@ namespace Presentation
             DDLProduct.SelectedValue = GVComment.SelectedRow.Cells[3].Text;
             DDLClient.SelectedValue = GVComment.SelectedRow.Cells[4].Text;
         }
+
+
+        protected void GVProducts_RowDeleting(object sender, EventArgs e)
+        {
+            // Verifica si HFProductId tiene un valor válido
+            if (!string.IsNullOrEmpty(HFCommentId.Value) && int.TryParse(HFCommentId.Value, out _idComment))
+            {
+                executed = objComent.deleteComment(_idComment);
+
+                if (executed)
+                {
+                    LblMsj.Text = "El producto se eliminó exitosamente";
+                    clear(); // Limpia las cajas de texto
+                    showComment(); // Muestra los productos
+                }
+                else
+                {
+                    LblMsj.Text = "Error al eliminar";
+                }
+            }
+            else
+            {
+                // Si no hay un ID válido, muestra un mensaje de error
+                LblMsj.Text = "No se ha seleccionado un producto válido para eliminar.";
+            }
+        }
+
+
     }
 }
