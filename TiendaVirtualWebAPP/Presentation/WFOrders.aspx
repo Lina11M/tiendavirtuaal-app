@@ -37,6 +37,7 @@
         <%-- Lista de Pedidos --%>
         <asp:GridView ID="GVOrder" runat="server" AutoGenerateColumns="False" 
             OnSelectedIndexChanged="GVOrder_SelectedIndexChanged" 
+            OnRowDeleting="GVOrder_RowDeleting"
             DataKeyNames="ped_id">
             <Columns>
                 <asp:BoundField DataField="ped_id" HeaderText="ID" />
