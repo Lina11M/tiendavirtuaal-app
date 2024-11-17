@@ -93,5 +93,32 @@ namespace Presentation
             TxtTelefono.Text = GVClients.SelectedRow.Cells[2].Text;
             TxtDireccion.Text = GVClients.SelectedRow.Cells[3].Text;
         }
+
+        protected void GVClients_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                // Obtener el ID del cliente a eliminar
+                int clienteId = Convert.ToInt32(GVClients.DataKeys[e.RowIndex].Value);
+
+                // Llamar al método deleteClient en la capa Logic para eliminar el cliente
+                bool exito = objClientLog.deleteClient(clienteId);
+
+                if (exito)
+                {
+                    LblMsj.Text = "El cliente se eliminó exitosamente.";
+                    ShowClients(); // Actualizar el GridView
+                }
+                else
+                {
+                    LblMsj.Text = "Error al eliminar el cliente.";
+                }
+            }
+            catch (Exception ex)
+            {
+                LblMsj.Text = "Error al eliminar el cliente: " + ex.Message;
+            }
+        }
+
     }
 }

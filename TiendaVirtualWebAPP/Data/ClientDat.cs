@@ -115,21 +115,33 @@ namespace Data
             objSelectCmd.Connection = objPer.openConnection();
             objSelectCmd.CommandText = "proDeleteClient"; //nombre del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("v_cli_id", MySqlDbType.Int32).Value = _cli_id;
+            objSelectCmd.Parameters.Add("v_id", MySqlDbType.Int32).Value = _cli_id;
 
             try
             {
                 row = objSelectCmd.ExecuteNonQuery();
+                
                 if (row == 1)
                 {
                     executed = true;
                 }
+                else
+                {
+                    
+                    throw new Exception("Error al eliminar el cliente. No se encontró el cliente con ID: " + _cli_id);
+                }
+                
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error " + e.ToString());
+                
+                Console.WriteLine("Error al eliminar el cliente de la base de datos: " + e.Message);
+                
             }
-            objPer.closeConnection();
+            finally
+            {
+                objPer.closeConnection();
+            }
             return executed;
         }
     }

@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-   <h1>Gestión de Clientes</h1>
+    <h1>Gestión de Clientes</h1>
     <div>
         <%-- Id del cliente --%>
         <asp:HiddenField ID="HFClienteId" runat="server" />
@@ -31,12 +31,15 @@
         <asp:Label ID="LblMsj" runat="server" Text=""></asp:Label>
         <br />
 
+
+
         <%-- Lista de clientes --%>
-        <asp:GridView ID="GVClients" runat="server" AutoGenerateColumns="False" 
-            OnSelectedIndexChanged="GVClients_SelectedIndexChanged" 
-            DataKeyNames="cli_id" > 
+        <asp:GridView ID="GVClients" runat="server" AutoGenerateColumns="False"
+            OnSelectedIndexChanged="GVClients_SelectedIndexChanged"
+            DataKeyNames="cli_id"
+            OnRowDeleting="GVClients_RowDeleting">
             <Columns>
-                <asp:BoundField DataField="cli_id" HeaderText="ID" /> 
+                <asp:BoundField DataField="cli_id" HeaderText="ID" />
                 <asp:BoundField DataField="cli_nombre" HeaderText="Nombre" />
                 <asp:BoundField DataField="cli_telefono" HeaderText="Teléfono" />
                 <asp:BoundField DataField="cli_direccion" HeaderText="Dirección" />

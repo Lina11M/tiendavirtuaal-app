@@ -43,10 +43,9 @@ namespace Logic
         }
 
         // Método para borrar un cliente
-        public bool deleteClient(int _clien_id)
+        public bool deleteClient(int _cli_id) 
         {
-            
-            return objCat.deleteClient(_clien_id);
+            return objCat.deleteClient(_cli_id); 
         }
     }
 }
