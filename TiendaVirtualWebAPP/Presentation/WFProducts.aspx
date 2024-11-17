@@ -51,7 +51,7 @@
         
 
         <%--Lidta de productos--%>
-        <asp:GridView ID="GVProducts" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVProducts_SelectedIndexChanged" >
+        <asp:GridView ID="GVProducts" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVProducts_SelectedIndexChanged" OnRowDeleting="GVProductos_RowDeleting" >
      <Columns>
          <asp:BoundField DataField="pro_id" HeaderText="Pro ID" />
          <asp:BoundField DataField="pro_nombre" HeaderText="Nombre" />

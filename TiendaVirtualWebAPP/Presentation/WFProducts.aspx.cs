@@ -143,6 +143,7 @@ namespace Presentation
             }
         
         }
+
         protected void GVProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
             HFProductId.Value = GVProducts.SelectedRow.Cells[0].Text;
@@ -153,6 +154,30 @@ namespace Presentation
             TBImagen.Text = GVProducts.SelectedRow.Cells[5].Text;
             DDLCategoria.SelectedValue = GVProducts.SelectedRow.Cells[6].Text;
             DDLProveedor.SelectedValue = GVProducts.SelectedRow.Cells[7].Text;
+        }
+        protected void GVProductos_RowDeleting(object sender, EventArgs e)
+        {
+            // Verifica si HFProductId tiene un valor válido
+            if (!string.IsNullOrEmpty(HFProductId.Value) && int.TryParse(HFProductId.Value, out _idProducts))
+            {
+                executed = objProdu.deleteProducts(_idProducts);
+
+                if (executed)
+                {
+                    LblMsj.Text = "El producto se eliminó exitosamente";
+                    clear(); // Limpia las cajas de texto
+                    showProducts(); // Muestra los productos
+                }
+                else
+                {
+                    LblMsj.Text = "Error al eliminar";
+                }
+            }
+            else
+            {
+                // Si no hay un ID válido, muestra un mensaje de error
+                LblMsj.Text = "No se ha seleccionado un producto válido para eliminar.";
+            }
         }
     }
     
