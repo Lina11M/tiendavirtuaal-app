@@ -124,7 +124,7 @@ namespace Presentation
         }
 
 
-        protected void GVProducts_RowDeleting(object sender, EventArgs e)
+        protected void GVUsers_RowDeleting(object sender, EventArgs e)
         {
             // Verifica si HFProductId tiene un valor válido
             if (!string.IsNullOrEmpty(HFUserId.Value) && int.TryParse(HFUserId.Value, out _idUsers))

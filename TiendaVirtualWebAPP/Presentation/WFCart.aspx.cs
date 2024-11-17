@@ -147,7 +147,7 @@ namespace Presentation
             DDLClient.SelectedValue = GVCart.SelectedRow.Cells[3].Text;
         }
 
-        protected void GVProducts_RowDeleting(object sender, EventArgs e)
+        protected void GVCart_RowDeleting(object sender, EventArgs e)
         {
             // Verifica si HFProductId tiene un valor válido
             if (!string.IsNullOrEmpty(HFCartId.Value) && int.TryParse(HFCartId.Value, out _idCart))
