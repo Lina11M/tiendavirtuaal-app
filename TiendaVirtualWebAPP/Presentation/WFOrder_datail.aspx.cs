@@ -142,5 +142,29 @@ namespace Presentation
             DDLProductos.SelectedValue = GVDetallePedido.SelectedRow.Cells[3].Text;
             DDLPedidos.SelectedValue = GVDetallePedido.SelectedRow.Cells[4].Text;
         }
+        protected void GVDetallePedido_RowDeleting(object sender, EventArgs e)
+        {
+            // Verifica si HFProductId tiene un valor válido
+            if (!string.IsNullOrEmpty(HFOrderDetailId.Value) && int.TryParse(HFOrderDetailId.Value, out _idOrderDetail))
+            {
+                executed = objDet.deleteOrderDetail(_idOrderDetail);
+
+                if (executed)
+                {
+                    LblMsj.Text = "El detalle pedido se eliminó exitosamente";
+                    clear(); // Limpia las cajas de texto
+                    showOrderDetail(); // Muestra los productos
+                }
+                else
+                {
+                    LblMsj.Text = "Error al eliminar";
+                }
+            }
+            else
+            {
+                // Si no hay un ID válido, muestra un mensaje de error
+                LblMsj.Text = "No se ha seleccionado un detalle pedido válido para eliminar.";
+            }
+        }
     }
 }
