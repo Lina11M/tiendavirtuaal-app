@@ -113,9 +113,9 @@ namespace Data
 
             MySqlCommand objSelectCmd = new MySqlCommand();
             objSelectCmd.Connection = objPer.openConnection();
-            objSelectCmd.CommandText = "procSelectDetallePedido"; // Nombre del procedimiento almacenado
+            objSelectCmd.CommandText = "proDeleteDetallePedido"; // Nombre del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("v_det_id", MySqlDbType.Int32).Value = _idOrderDetail;
+            objSelectCmd.Parameters.Add("v_id", MySqlDbType.Int32).Value = _idOrderDetail;
 
             try
             {

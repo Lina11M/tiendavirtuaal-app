@@ -35,7 +35,7 @@
         <br />
 
          <%--Lidta de detalels de oredenes--%>
-        <asp:GridView ID="GVDetallePedido" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVDetallePedido_SelectedIndexChanged">
+        <asp:GridView ID="GVDetallePedido" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVDetallePedido_SelectedIndexChanged" OnRowDeleting="GVDetallePedido_RowDeleting">
             <Columns>
                 <asp:BoundField DataField="det_id" HeaderText="Detalle ID" />
                 <asp:BoundField DataField="det_precio_unitario" HeaderText="Precio Unitario" />
