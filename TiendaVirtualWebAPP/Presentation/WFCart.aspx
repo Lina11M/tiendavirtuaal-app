@@ -29,7 +29,7 @@
         <br />
 
         <%--Lista de comentarios--%>
-        <asp:GridView ID="GVCart" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVCart_SelectedIndexChanged" OnRowDeleting="GVProducts_RowDeleting">
+        <asp:GridView ID="GVCart" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVCart_SelectedIndexChanged" OnRowDeleting="GVCart_RowDeleting">
             <%--Se agrega la propiedad "Columns" que permite personalizar los nombres de las columnas--%>
             <Columns>
                 <asp:BoundField DataField="car_id" HeaderText="Id" />

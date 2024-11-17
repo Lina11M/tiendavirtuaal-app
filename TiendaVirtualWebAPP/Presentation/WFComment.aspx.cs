@@ -153,7 +153,7 @@ namespace Presentation
         }
 
 
-        protected void GVProducts_RowDeleting(object sender, EventArgs e)
+        protected void GVComment_RowDeleting(object sender, EventArgs e)
         {
             // Verifica si HFProductId tiene un valor válido
             if (!string.IsNullOrEmpty(HFCommentId.Value) && int.TryParse(HFCommentId.Value, out _idComment))

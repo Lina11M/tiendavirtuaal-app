@@ -33,7 +33,7 @@
         <br />
 
         <%--Lista de comentarios--%>
-        <asp:GridView ID="GVComment" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVComment_SelectedIndexChanged" OnRowDeleting="GVProducts_RowDeleting">
+        <asp:GridView ID="GVComment" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVComment_SelectedIndexChanged" OnRowDeleting="GVComment_RowDeleting">
             <%--Se agrega la propiedad "Columns" que permite personalizar los nombres de las columnas--%>
             <Columns>
                 <asp:BoundField DataField="com_id" HeaderText="Id" />
