@@ -135,5 +135,36 @@ namespace Presentation
                 LblMsj.Text = "Error al seleccionar el pedido: " + ex.Message;
             }
         }
+
+        protected void GVOrder_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                // Obtener el ID del pedido a eliminar de la fila seleccionada
+                int orderId = Convert.ToInt32(GVOrder.DataKeys[e.RowIndex].Value);
+
+                // Llamar al método deletePedido en la capa Logic para eliminar el pedido
+                bool exito = objOrderLog.deletePedido(orderId); // Asumo que tienes una instancia objOrderLog de la clase OrderLog
+
+                if (exito)
+                {
+                    // Mostrar un mensaje de éxito al usuario
+                    LblMsj.Text = "El pedido se eliminó exitosamente.";
+
+                    // Actualizar el GridView para reflejar los cambios
+                    showPedidos(); // Asumo que tienes un método showPedidos() para actualizar el gridview
+                }
+                else
+                {
+                    // Mostrar un mensaje de error al usuario
+                    LblMsj.Text = "Error al eliminar el pedido.";
+                }
+            }
+            catch (Exception ex)
+            {
+                // Mostrar un mensaje de error al usuario, incluyendo la excepción
+                LblMsj.Text = "Error al eliminar el pedido: " + ex.Message;
+            }
+        }
     }
 }
