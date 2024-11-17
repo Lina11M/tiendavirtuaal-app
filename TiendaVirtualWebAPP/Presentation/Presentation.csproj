@@ -46,6 +46,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SimpleCrypto, Version=26.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleCrypto.0.3.30.26\lib\SimpleCrypto.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -134,14 +137,12 @@
     <Content Include="WFPay.aspx" />
     <Content Include="WFProviders.aspx" />
     <Content Include="Web.config" />
-
     <Content Include="WFCategory.aspx" />
-
     <Content Include="WFCart.aspx" />
     <Content Include="WFComment.aspx" />
+    <Content Include="WFRegister.aspx" />
     <Content Include="WFUsers.aspx" />
     <Content Include="WFProducts.aspx" />
-
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Inicio.aspx.cs">
@@ -168,7 +169,6 @@
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
     <Compile Include="WFCategory.aspx.cs">
       <DependentUpon>WFCategory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,6 +189,13 @@
     </Compile>
     <Compile Include="WFComment.aspx.designer.cs">
       <DependentUpon>WFComment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFRegister.aspx.cs">
+      <DependentUpon>WFRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFRegister.aspx.designer.cs">
+      <DependentUpon>WFRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="WFUsers.aspx.cs">
       <DependentUpon>WFUsers.aspx</DependentUpon>
@@ -231,7 +238,6 @@
     </Compile>
     <Compile Include="WFProducts.aspx.designer.cs">
       <DependentUpon>WFProducts.aspx</DependentUpon>
-
     </Compile>
   </ItemGroup>
   <ItemGroup>
