@@ -36,7 +36,8 @@
 
         <%-- Lista de Pagos --%>
         <asp:GridView ID="GVPay" runat="server" AutoGenerateColumns="False" 
-            OnSelectedIndexChanged="GVPay_SelectedIndexChanged" 
+            OnSelectedIndexChanged="GVPay_SelectedIndexChanged"
+            OnRowDeleting="GVPay_RowDeleting"
             DataKeyNames="pag_id">
             <Columns>
                 <asp:BoundField DataField="pag_id" HeaderText="ID" />
