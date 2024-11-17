@@ -37,7 +37,7 @@
         <br />
 
         <%--Lista de Usuarios--%>
-        <asp:GridView ID="GVUsers" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVUsers_SelectedIndexChanged">
+        <asp:GridView ID="GVUsers" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVUsers_SelectedIndexChanged" OnRowDeleting="GVProducts_RowDeleting">
             <%--Se agrega la propiedad "Columns" que permite personalizar los nombres de las columnas--%>
             <Columns>
                 <asp:BoundField DataField="usu_id" HeaderText="Id" />

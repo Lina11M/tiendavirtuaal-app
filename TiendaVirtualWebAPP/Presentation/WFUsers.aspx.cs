@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -123,6 +124,30 @@ namespace Presentation
         }
 
 
+        protected void GVProducts_RowDeleting(object sender, EventArgs e)
+        {
+            // Verifica si HFProductId tiene un valor válido
+            if (!string.IsNullOrEmpty(HFUserId.Value) && int.TryParse(HFUserId.Value, out _idUsers))
+            {
+                executed = objUser.deleteUsers(_idUsers);
+
+                if (executed)
+                {
+                    LblMsj.Text = "El producto se eliminó exitosamente";
+                    clear(); // Limpia las cajas de texto
+                    showUsers(); // Muestra los productos
+                }
+                else
+                {
+                    LblMsj.Text = "Error al eliminar";
+                }
+            }
+            else
+            {
+                // Si no hay un ID válido, muestra un mensaje de error
+                LblMsj.Text = "No se ha seleccionado un producto válido para eliminar.";
+            }
+        }
 
 
 
