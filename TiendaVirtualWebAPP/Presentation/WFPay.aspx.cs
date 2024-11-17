@@ -134,5 +134,39 @@ namespace Presentation
                 LblMsj.Text = "Error al seleccionar el pago: " + ex.Message;
             }
         }
+
+        protected void GVPay_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                // Obtener el ID del pago a eliminar de la fila seleccionada
+                int pagoId = Convert.ToInt32(GVPay.DataKeys[e.RowIndex].Value);
+
+                // Imprimir el valor del ID del pago (opcional, para depuración)
+                Console.WriteLine("ID del pago a eliminar: " + pagoId);
+
+                // Llamar al método deletePago en la capa Logic para eliminar el pago
+                bool exito = objPayLog.deletePago(pagoId);
+
+                if (exito)
+                {
+                    // Mostrar un mensaje de éxito al usuario
+                    LblMsj.Text = "El pago se eliminó exitosamente.";
+
+                    // Actualizar el GridView para reflejar los cambios
+                    ShowPays();
+                }
+                else
+                {
+                    // Mostrar un mensaje de error al usuario
+                    LblMsj.Text = "Error al eliminar el pago.";
+                }
+            }
+            catch (Exception ex)
+            {
+                // Mostrar un mensaje de error al usuario, incluyendo la excepción
+                LblMsj.Text = "Error al eliminar el pago: " + ex.Message;
+            }
+        }
     }
 }
