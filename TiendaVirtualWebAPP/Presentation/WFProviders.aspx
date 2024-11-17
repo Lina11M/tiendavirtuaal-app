@@ -29,7 +29,7 @@
         <br />
         
          <%--Lidta de provedores--%>
-        <asp:GridView ID="GVProviders" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVProviders_SelectedIndexChanged" >
+        <asp:GridView ID="GVProviders" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVProviders_SelectedIndexChanged" OnRowDeleting="GVProveedores_RowDeleting">
             <Columns>
                 <asp:BoundField DataField="prov_id" HeaderText="Prov ID" />
                 <asp:BoundField DataField="prov_nit" HeaderText="Nit" />

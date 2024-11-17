@@ -106,5 +106,29 @@ namespace Presentation
             TBContacto.Text = GVProviders.SelectedRow.Cells[3].Text;
             
         }
+        protected void GVProveedores_RowDeleting(object sender, EventArgs e)
+        {
+            // Verifica si HFProductId tiene un valor válido
+            if (!string.IsNullOrEmpty(HFProvidersId.Value) && int.TryParse(HFProvidersId.Value, out _idProviders))
+            {
+                executed = objProv.deleteProviders(_idProviders);
+
+                if (executed)
+                {
+                    LblMsj.Text = "El producto se eliminó exitosamente";
+                    clear(); // Limpia las cajas de texto
+                    showProviders(); // Muestra los productos
+                }
+                else
+                {
+                    LblMsj.Text = "Error al eliminar";
+                }
+            }
+            else
+            {
+                // Si no hay un ID válido, muestra un mensaje de error
+                LblMsj.Text = "No se ha seleccionado un producto válido para eliminar.";
+            }
+        }
     }
 }
