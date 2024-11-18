@@ -171,6 +171,10 @@
       <Project>{782cc1e6-04cc-4ae6-80a9-602715e3c52f}</Project>
       <Name>Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{42794af3-100f-4268-8507-19b6bb7d1da0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />

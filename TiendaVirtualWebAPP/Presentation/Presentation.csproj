@@ -130,6 +130,8 @@
     <Content Include="bin\System.Threading.Tasks.Extensions.xml" />
     <Content Include="bin\ZstdSharp.dll" />
     <Content Include="Inicio.aspx" />
+    <Content Include="InicioCliente.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="WFOrder_datail.aspx" />
     <Content Include="Web.config" />
     <Content Include="WFClients.aspx" />
@@ -151,6 +153,20 @@
     </Compile>
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioCliente.aspx.cs">
+      <DependentUpon>InicioCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioCliente.aspx.designer.cs">
+      <DependentUpon>InicioCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -268,6 +284,10 @@
     <ProjectReference Include="..\Logic\Logic.csproj">
       <Project>{251c06a1-5947-46b2-b787-7bafe201d7ad}</Project>
       <Name>Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{42794af3-100f-4268-8507-19b6bb7d1da0}</Project>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
