@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Web;
+using Model;
 
 namespace Logic
 {
@@ -34,6 +35,12 @@ namespace Logic
         public bool deleteUsers(int _idUsers)
         {
             return objUsers.deleteUsers(_idUsers);
+        }
+
+
+        public UserMod showUserMail(string mail)
+        {
+            return objUsers.showUserMail(mail);
         }
     }
 }
