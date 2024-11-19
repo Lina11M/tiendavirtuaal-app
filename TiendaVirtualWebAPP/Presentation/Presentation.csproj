@@ -72,7 +72,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-
     <Content Include="bin\BouncyCastle.Cryptography.dll" />
     <Content Include="bin\BouncyCastle.Cryptography.xml" />
     <Content Include="bin\Data.dll" />
@@ -131,6 +130,8 @@
     <Content Include="bin\ZstdSharp.dll" />
     <Content Include="Inicio.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="resources\assets\css\style.css" />
+    <Content Include="resources\assets\js\main.js" />
     <Content Include="resources\css\bootstrap-grid.css" />
     <Content Include="resources\css\bootstrap-grid.min.css" />
     <Content Include="resources\css\bootstrap-grid.rtl.css" />

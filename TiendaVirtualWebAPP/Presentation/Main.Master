@@ -6,7 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Tienda Virtual</title>
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="resources/assets/css/style.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -14,62 +15,144 @@
     <form id="form1" runat="server">
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">MiniTienda</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="inicio.aspx">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="WFCart.aspx">Carrito de Compras </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="WFCategory.aspx">Categoria </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="WFClients.aspx">Clientes </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="WFComment.aspx">Comentarios </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="WFOrder_datail.aspx">Detalle Pedido </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="WFPay.aspx">Pagos </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="WFOrders.aspx">Pedidos </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="WFProviders.aspx">Proveedores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="WFProducts.aspx">Productos </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="WFUsers.aspx">Usuarios </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Cerrar sesion</a>
-                        </li>
-                    </ul>
+                <!-- =============== Navigation ================ -->
+                <div class="container">
+                    <div class="navigation">
+                        <ul>
+
+                            <li>
+                                <a href="#">
+                                    <span class="icon">
+                                        <ion-icon name="logo-apple"></ion-icon>
+                                    </span>
+                                    <span class="title">Tienda virtual</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="WFCart.aspx">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Carrito de Compras </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="WFCategory.aspx">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Categoria </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="WFClients.aspx">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Clientes </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="WFComment.aspx">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Comentarios </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="WFOrder_datail.aspx">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Detalle Pedido </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="WFOrders.aspx">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Pedidos </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="WFPay.aspx">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Pagos </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="WFProducts.aspx">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Productos </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="WFProviders.aspx">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Proveedores </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="WFUsers.aspx">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Usuarios </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- ========================= Main ==================== -->
+                    <div class="main">
+                        <div class="topbar">
+
+                            <div class="toggle">
+                                <ion-icon name="menu-outline"></ion-icon>
+                            </div>
+
+                            <div class="user">
+                                <img src="assets/imgs/customer01.jpg" alt="">
+                            </div>
+
+                        </div>
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
                 </div>
             </div>
         </nav>
 
-        <%--Aqui va lo que se repite en los demas formularios--%>
-
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
     </form>
     <%-- pie de pagina--%>
-    <p>modazero@gmail.com</p>
+    <!-- =========== Scripts =========  -->
+    <script src="resources/assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="resources/js/bootstrap.bundle.min.js"></script>
     <script src="resources/js/bootstrap.min.js"></script>
