@@ -72,7 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="inicio.aspx" />
+
     <Content Include="bin\BouncyCastle.Cryptography.dll" />
     <Content Include="bin\BouncyCastle.Cryptography.xml" />
     <Content Include="bin\Data.dll" />
@@ -130,7 +130,6 @@
     <Content Include="bin\System.Threading.Tasks.Extensions.xml" />
     <Content Include="bin\ZstdSharp.dll" />
     <Content Include="Inicio.aspx" />
-    <Content Include="InicioCliente.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="resources\css\bootstrap-grid.css" />
     <Content Include="resources\css\bootstrap-grid.min.css" />
@@ -160,7 +159,6 @@
     <Content Include="WFOrders.aspx" />
     <Content Include="WFPay.aspx" />
     <Content Include="WFProviders.aspx" />
-    <Content Include="Web.config" />
     <Content Include="WFCategory.aspx" />
     <Content Include="WFCart.aspx" />
     <Content Include="WFComment.aspx" />
@@ -175,13 +173,6 @@
     </Compile>
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="InicioCliente.aspx.cs">
-      <DependentUpon>InicioCliente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="InicioCliente.aspx.designer.cs">
-      <DependentUpon>InicioCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
