@@ -4,32 +4,74 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tienda Virtual</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-             <%--Aqui va lo que se repite en los demas formularios--%>
-        <a href="inicio.aspx">Inicio</a>
-        <a href="WFCart.aspx">Carrito de Compras</a>
-        <a href="WFCategory.aspx">Categoria</a>
-        <a href="WFClients.aspx">Clientes</a>
-        <a href="WFComment.aspx">Comentarios</a>
-        <a href="WFOrder_datail.aspx">Detalle-Pedido</a>
-        <a href="WFPay.aspx">Pagos</a>
-        <a href="WFOrders.aspx">Pedidos</a>
-        <a href="WFProviders.aspx">Proveedores</a>
-        <a href="WFProducts.aspx">Productos</a>
-        <a href="WFUsers.aspx">Usuarios</a>
-        <a href="#">Cerrar Sesion</a>
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MiniTienda</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="inicio.aspx">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFCart.aspx">Carrito de Compras </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFCategory.aspx">Categoria </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFClients.aspx">Clientes </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFComment.aspx">Comentarios </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFOrder_datail.aspx">Detalle Pedido </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFPay.aspx">Pagos </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFPay.aspx">Pedidos </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFProviders.aspx">Proveedores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFProducts.aspx">Productos </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFUsers.aspx">Usuarios </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cerrar sesion</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <%--Aqui va lo que se repite en los demas formularios--%>
+
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
-     <%-- pie de pagina--%>
-  <p> modazero@gmail.com</p>
+    <%-- pie de pagina--%>
+    <p>modazero@gmail.com</p>
+
+    <script src="resources/js/bootstrap.bundle.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
 </body>
 </html>
