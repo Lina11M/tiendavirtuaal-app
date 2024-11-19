@@ -42,7 +42,7 @@
                             <a class="nav-link" href="WFPay.aspx">Pagos </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="WFPay.aspx">Pedidos </a>
+                            <a class="nav-link" href="WFOrders.aspx">Pedidos </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="WFProviders.aspx">Proveedores</a>
