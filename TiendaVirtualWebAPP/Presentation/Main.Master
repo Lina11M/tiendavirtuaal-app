@@ -26,7 +26,7 @@
                             <li>
                                 <a href="#">
                                     <span class="icon">
-                                        <ion-icon name="logo-apple"></ion-icon>
+                                        <ion-icon name="home-outline"></ion-icon>
                                     </span>
                                     <span class="title">Tienda virtual</span>
                                 </a>
@@ -35,7 +35,7 @@
                             <li>
                                 <a href="WFCart.aspx">
                                     <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
+                                        <ion-icon name="cart-outline"></ion-icon>
                                     </span>
                                     <span class="title">Carrito de Compras </span>
                                 </a>
@@ -43,7 +43,7 @@
                             <li>
                                 <a href="WFCategory.aspx">
                                     <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
+                                        <ion-icon name="layers-outline"></ion-icon>
                                     </span>
                                     <span class="title">Categoria </span>
                                 </a>
@@ -51,7 +51,7 @@
                             <li>
                                 <a href="WFClients.aspx">
                                     <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
+                                        <ion-icon name="people-outline"></ion-icon>
                                     </span>
                                     <span class="title">Clientes </span>
                                 </a>
@@ -60,7 +60,7 @@
                             <li>
                                 <a href="WFComment.aspx">
                                     <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
+                                        <ion-icon name="chatbubbles-outline"></ion-icon>
                                     </span>
                                     <span class="title">Comentarios </span>
                                 </a>
@@ -69,7 +69,7 @@
                             <li>
                                 <a href="WFOrder_datail.aspx">
                                     <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
+                                        <ion-icon name="receipt-outline"></ion-icon>
                                     </span>
                                     <span class="title">Detalle Pedido </span>
                                 </a>
@@ -78,7 +78,7 @@
                             <li>
                                 <a href="WFOrders.aspx">
                                     <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
+                                        <ion-icon name="clipboard-outline"></ion-icon>
                                     </span>
                                     <span class="title">Pedidos </span>
                                 </a>
@@ -87,7 +87,7 @@
                             <li>
                                 <a href="WFPay.aspx">
                                     <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
+                                        <ion-icon name="cash-outline"></ion-icon>
                                     </span>
                                     <span class="title">Pagos </span>
                                 </a>
@@ -96,7 +96,7 @@
                             <li>
                                 <a href="WFProducts.aspx">
                                     <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
+                                        <ion-icon name="cube-outline"></ion-icon>
                                     </span>
                                     <span class="title">Productos </span>
                                 </a>
@@ -105,7 +105,7 @@
                             <li>
                                 <a href="WFProviders.aspx">
                                     <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
+                                        <ion-icon name="business-outline"></ion-icon>
                                     </span>
                                     <span class="title">Proveedores </span>
                                 </a>
@@ -114,7 +114,7 @@
                             <li>
                                 <a href="WFUsers.aspx">
                                     <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
+                                        <ion-icon name="people-circle-outline"></ion-icon>
                                     </span>
                                     <span class="title">Usuarios </span>
                                 </a>

@@ -95,13 +95,13 @@ namespace Presentation
         protected void GVCategorias_RowDeleting(object sender, EventArgs e)
         {
             // Verifica si HFProductId tiene un valor válido
-            if (!string.IsNullOrEmpty(HFCategoryID.Value) && int.TryParse(HHFCategoryID.Value, out _idCategory))
+            if (!string.IsNullOrEmpty(HFCategoryID.Value) && int.TryParse(HFCategoryID.Value, out _idCategory))
             {
-                executed = objCategory.ddeleteCategory(_idCategory);
+                executed = objCategory.deleteCategory(_idCategory);
 
                 if (executed)
                 {
-                    LblMsj.Text = "El producto se eliminó exitosamente";
+                    LblMsj.Text = "La categoria se eliminó exitosamente";
                     clear(); // Limpia las cajas de texto
                     showCategories(); // Muestra los productos
                 }
@@ -113,7 +113,7 @@ namespace Presentation
             else
             {
                 // Si no hay un ID válido, muestra un mensaje de error
-                LblMsj.Text = "No se ha seleccionado un producto válido para eliminar.";
+                LblMsj.Text = "No se ha seleccionado una categoria válida para eliminar.";
             }
         }
     }
