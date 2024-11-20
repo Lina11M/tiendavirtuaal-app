@@ -92,5 +92,29 @@ namespace Presentation
             HFCategoryID.Value = GVCategorias.SelectedRow.Cells[0].Text;
             TBNombre.Text = GVCategorias.SelectedRow.Cells[1].Text;       
         }
+        protected void GVCategorias_RowDeleting(object sender, EventArgs e)
+        {
+            // Verifica si HFProductId tiene un valor válido
+            if (!string.IsNullOrEmpty(HFCategoryID.Value) && int.TryParse(HHFCategoryID.Value, out _idCategory))
+            {
+                executed = objCategory.ddeleteCategory(_idCategory);
+
+                if (executed)
+                {
+                    LblMsj.Text = "El producto se eliminó exitosamente";
+                    clear(); // Limpia las cajas de texto
+                    showCategories(); // Muestra los productos
+                }
+                else
+                {
+                    LblMsj.Text = "Error al eliminar";
+                }
+            }
+            else
+            {
+                // Si no hay un ID válido, muestra un mensaje de error
+                LblMsj.Text = "No se ha seleccionado un producto válido para eliminar.";
+            }
+        }
     }
 }
